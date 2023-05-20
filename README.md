@@ -59,5 +59,5 @@ $ make clean
 To format the code:
 
 ```bash
-$ make format # follow K&R style
+$ make format # follow Linux style
 ```
