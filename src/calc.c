@@ -14,8 +14,8 @@ int sub(int x, int y)
 
 int mul(int x, int y)
 {
-	long long int result = (long long int) x * y;
-	return result >= INT_MAX || result <= INT_MIN ? -1 : (int) result;
+	long long int result = (long long int)x * y;
+	return result >= INT_MAX || result <= INT_MIN ? -1 : (int)result;
 }
 
 int div(int x, int y)
@@ -59,7 +59,7 @@ bool is_smaller(int x, int y)
 
 void fill_single_digit_positive_number(int arr[], size_t size)
 {
-	if ((int) size < 9) {
+	if ((int)size < 9) {
 		return;
 	}
 

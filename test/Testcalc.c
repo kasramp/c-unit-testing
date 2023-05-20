@@ -81,8 +81,7 @@ void test_is_smaller()
 void test_fill_single_digit_positive_number()
 {
 	int expected_arr[9] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-	size_t expected_size =
-	    sizeof(expected_arr) / sizeof(expected_arr[0]);
+	size_t expected_size = sizeof(expected_arr) / sizeof(expected_arr[0]);
 
 	int arr[9];
 	size_t arr_size = sizeof(arr) / sizeof(arr[0]);
