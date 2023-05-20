@@ -1,0 +1,27 @@
+name: Test and build
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test
+      - run: |
+          git submodule init
+          make clean test
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v3
+      - name: Compile
+      - run: |
+          git submodule init
+          make clean
+          make
+          make install
+      
