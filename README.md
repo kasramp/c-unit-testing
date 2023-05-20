@@ -14,7 +14,7 @@ The `unity` directory is added as a submodule. Make sure to initialize it after
 cloning the project,
 
 ```bash
-$ git submodule update --recursive
+$ git submodule init && git submodule update --recursive
 ```
 
 The Makefile is the standard Unity make, inspired from [here](http://www.throwtheswitch.org/build/make).
