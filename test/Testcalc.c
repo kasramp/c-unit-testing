@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 #include "unity.h"
 #include "calc.h"
 
@@ -77,6 +79,35 @@ void test_is_smaller()
     TEST_ASSERT_FALSE(is_smaller(10, 9));
 }
 
+void test_fill_single_digit_positive_number()
+{
+    int expected_arr[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    size_t expected_size = sizeof(expected_arr) / sizeof(expected_arr[0]);
+
+    int arr[9];
+    size_t arr_size = sizeof(arr) / sizeof(arr[0]);
+
+    fill_single_digit_positive_number(arr, arr_size);
+
+    TEST_ASSERT_EQUAL_INT_ARRAY(expected_arr, arr, expected_size);
+
+    TEST_ASSERT_EQUAL_MEMORY(expected_arr, arr, expected_size);
+}
+
+void test_true_as_string()
+{
+    TEST_ASSERT_EQUAL_STRING("true", true_as_string());
+    TEST_ASSERT_EQUAL_STRING_LEN("truz", true_as_string(), 3);
+    TEST_ASSERT_NOT_NULL(true_as_string());
+    TEST_ASSERT_EQUAL_MEMORY("true", true_as_string(), 4);
+}
+
+void test_false_as_string()
+{
+    TEST_ASSERT_EQUAL_STRING_MESSAGE("false", false_as_string(), "The output should be 'false'");
+    TEST_ASSERT_EQUAL_STRING_LEN_MESSAGE("falze", false_as_string(), 3, "First three characters should be 'tru'");
+}
+
 void setUp()
 {
 
@@ -104,6 +135,9 @@ int main(void)
     RUN_TEST(test_is_greater);
     RUN_TEST(test_is_equal);
     RUN_TEST(test_is_smaller);
+    RUN_TEST(test_fill_single_digit_positive_number);
+    RUN_TEST(test_true_as_string);
+    RUN_TEST(test_false_as_string);
 
     UNITY_END();
 

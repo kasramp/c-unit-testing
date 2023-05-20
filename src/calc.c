@@ -1,4 +1,5 @@
 #include <limits.h>
+
 #include "calc.h"
 
 int add(int x, int y)
@@ -55,4 +56,27 @@ bool is_greater(int x, int y)
 bool is_smaller(int x, int y)
 {
     return !is_equal(x, y) && !is_greater(x, y);
+}
+
+void fill_single_digit_positive_number(int arr[], size_t size)
+{
+    if ((int)size < 9)
+    {
+        return;
+    }
+
+    for (int i=1; i<= 9; i++)
+    {
+        arr[i-1] = i;
+    }
+}
+
+const char* true_as_string()
+{
+    return "true";
+}
+
+const char* false_as_string()
+{
+    return "false";
 }
