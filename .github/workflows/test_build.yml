@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          submodule: 'true'
+          submodules: 'true'
       - name: Test
         shell: bash
         run: |
@@ -22,11 +22,10 @@ jobs:
       - name: Checkout
         uses: action/checkout@v3
         with:
-          submodule: 'true'
+          submodules: 'true'
       - name: Compile
         shell: bash
         run: |
           make clean
           make
           make install
-      
