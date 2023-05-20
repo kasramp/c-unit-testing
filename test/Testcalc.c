@@ -81,7 +81,7 @@ void test_is_smaller()
 
 void test_fill_single_digit_positive_number()
 {
-    int expected_arr[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int expected_arr[9] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
     size_t expected_size = sizeof(expected_arr) / sizeof(expected_arr[0]);
 
     int arr[9];
@@ -104,8 +104,10 @@ void test_true_as_string()
 
 void test_false_as_string()
 {
-    TEST_ASSERT_EQUAL_STRING_MESSAGE("false", false_as_string(), "The output should be 'false'");
-    TEST_ASSERT_EQUAL_STRING_LEN_MESSAGE("falze", false_as_string(), 3, "First three characters should be 'tru'");
+    TEST_ASSERT_EQUAL_STRING_MESSAGE("false", false_as_string(),
+				     "The output should be 'false'");
+    TEST_ASSERT_EQUAL_STRING_LEN_MESSAGE("falze", false_as_string(), 3,
+					 "First three characters should be 'tru'");
 }
 
 void setUp()

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "calc.h"
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
     printf("'10 + 2 = %d'\n", add(10, 2));
     printf("'10 - 2 = %d'\n", sub(10, 2));

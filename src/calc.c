@@ -36,9 +36,8 @@ int power_two(int x)
 int power(int x, int n)
 {
     int out = x;
-    for (int i = 1; i < n; i++)
-    {
-        out = mul(out, x);
+    for (int i = 1; i < n; i++) {
+	out = mul(out, x);
     }
     return out;
 }
@@ -60,23 +59,21 @@ bool is_smaller(int x, int y)
 
 void fill_single_digit_positive_number(int arr[], size_t size)
 {
-    if ((int)size < 9)
-    {
-        return;
+    if ((int) size < 9) {
+	return;
     }
 
-    for (int i=1; i<= 9; i++)
-    {
-        arr[i-1] = i;
+    for (int i = 1; i <= 9; i++) {
+	arr[i - 1] = i;
     }
 }
 
-const char* true_as_string()
+const char *true_as_string()
 {
     return "true";
 }
 
-const char* false_as_string()
+const char *false_as_string()
 {
     return "false";
 }

@@ -89,6 +89,9 @@ compile: $(OBJS)
 install: $(OBJS)
 	$(LINK) -o calc.$(TARGET_EXTENSION) $(OBJS)
 
+format:
+	indent -kr src/*.c src/*.h test/*.c
+
 clean:
 	$(CLEANUP) $(PATHO)*.o
 	$(CLEANUP) $(PATHB)*.$(TARGET_EXTENSION)
