@@ -1,0 +1,17 @@
+test/Testcalc.c:94:test_add:PASS
+test/Testcalc.c:95:test_sub:PASS
+test/Testcalc.c:96:test_mul:PASS
+test/Testcalc.c:97:test_mul_overflow:PASS
+test/Testcalc.c:98:test_mul_underflow:PASS
+test/Testcalc.c:99:test_div:PASS
+test/Testcalc.c:100:test_mod:PASS
+test/Testcalc.c:101:test_power_two:PASS
+test/Testcalc.c:102:test_power_two_overflow:PASS
+test/Testcalc.c:103:test_power:PASS
+test/Testcalc.c:104:test_is_greater:PASS
+test/Testcalc.c:105:test_is_equal:PASS
+test/Testcalc.c:106:test_is_smaller:PASS
+
+-----------------------
+13 Tests 0 Failures 0 Ignored 
+OK
