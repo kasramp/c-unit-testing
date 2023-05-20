@@ -55,3 +55,9 @@ To clean:
 ```bash
 $ make clean
 ```
+
+To format the code:
+
+```bash
+$ make format # follow K&R style
+```
