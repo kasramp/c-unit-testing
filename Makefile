@@ -90,7 +90,8 @@ install: $(OBJS)
 	$(LINK) -o calc.$(TARGET_EXTENSION) $(OBJS)
 
 format:
-	indent -kr src/*.c src/*.h test/*.c
+	indent -kr $(PATHS)*.c $(PATHS)*.h $(PATHT)*.c
+	$(CLEANUP) $(PATHS)*~ $(PATHS)*~ $(PATHT)*~
 
 clean:
 	$(CLEANUP) $(PATHO)*.o
